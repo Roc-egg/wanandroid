@@ -1,0 +1,155 @@
+name: wanandroid
+description: Flutter版玩安卓练习项目
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  #icons资源包
+  cupertino_icons: ^1.0.3
+
+  #网络请求
+  dio: ^4.0.0
+  #Dio的 cookie 管理器
+  dio_cookie_manager: ^2.0.0
+  #Dart 中 http 请求的 cookie 管理器，通过它您可以轻松处理复杂的 cookie 策略和持久化 cookie
+  cookie_jar: ^3.0.1
+
+  #Flutter 小部件，用于将 HTML 和 CSS 呈现为 Flutter 小部件
+  flutter_html: ^2.1.1
+  #用于转义 HTML 编码字符串的 Dart 库
+  html_unescape: ^2.0.0
+
+  #持久化存储SharedPreferences
+  shared_preferences: ^2.0.7
+  #本地json对象存储
+  localstorage: ^4.0.0+1
+
+  #官方状态管理库
+  provider: 6.0.0
+  #WebView for Flutter
+  webview_flutter: ^2.0.12
+  #允许 Flutter 与原生 WebView 通信的插件
+  flutter_webview_plugin: ^0.4.0
+
+  #设备信息
+  device_info_plus: ^2.1.0
+  #查询应用程序包的信息
+  package_info_plus: ^1.0.6
+
+  #Quiver 是 Dart 的一组实用程序库，它使使用许多 Dart 库变得更容易、更方便，或者添加了额外的功能
+  quiver: ^3.0.1
+
+  #集合和实用程序函数以及与集合相关的类
+  collection: ^1.15.0
+
+  #一个纯 flutter toast 库 支持自定义样式/小部件
+  oktoast: ^3.1.1
+  #提供给 flutter 滚动组件下拉刷新和拉起加载的小部件
+  pull_to_refresh: ^2.0.0
+  #banner轮播类控件
+  card_swiper: ^1.0.4
+  # 图片加载库
+  cached_network_image: ^3.1.0
+  # 类iOS侧滑菜单
+  flutter_slidable: ^0.6.0
+  # 一个包提供了一种在 Flutter 项目中添加微光效果的简单方法
+  shimmer: ^2.0.0
+  # 识别图片的主要颜色
+  #  palette_generator: ^0.2.0
+  # Flutter 的 Markdown 渲染器。从使用简单 Markdown 标签格式化的纯文本数据创建富文本输出，包括文本样式、表格、链接等
+  flutter_markdown: ^0.6.5
+  #Flutter 的矢量设计和运行时动画。
+  flare_flutter: ^3.0.2
+
+  #用于启动 URL 的 Flutter 插件。支持 iOS、Android、Web、Windows、macOS 和 Linux。
+  url_launcher: ^6.0.9
+  #Flutter 插件，用于通过平台共享 UI 共享内容，在 Android 上使用 ACTION_SEND 意图，在 iOS 上使用 UIActivityViewController
+  share: 2.0.4
+  #Flutter 插件，可帮助在 Google Play 商店和 Apple App Store 中留下用户评论/评分
+  launch_review: ^3.0.1
+  #一个可以调用原生APP打开带字符串文件导致flutter的插件，支持iOS(DocumentInteraction) / android(intent) / PC(ffi) / web(dart:html)
+  open_file: ^3.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  #用于 Dart 代码生成和模块化编译的构建系统
+  build_runner: ^2.1.1
+  #实体json
+  json_serializable: ^4.1.4
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  fonts:
+    - family: iconfont
+      fonts:
+        - asset: assets/fonts/iconfont.ttf
+    - family: kuaile # 站酷 快乐字体  https://fonts.google.com/?selection.family=Noto+Sans+SC&subset=chinese-simplified
+      fonts:
+        - asset: assets/fonts/ZCOOLKuaiLe-Regular.ttf
+  assets:
+    - assets/animations/
+    - assets/images/
+  #      - CHANGELOG.md
+  #   - images/a_dot_ham.jpeg
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+flutter_intl:
+  enabled: true
